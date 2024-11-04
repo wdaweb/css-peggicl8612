@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+
+            width: 800px;
+            height: 800px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            right: 0;
+            margin: auto;
+            background: rgba(200, 200, 200, 0.1);
+
+
+        }
+
+
+        .box {
+            width: 50%;
+            height: 10%;
+            background: #33333346;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .text {
+            color: rgba(107, 82, 82, 0.616);
+            text-align: left;
+            position: absolute;
+            left: 205px;
+            top: 420px;
+        }
+
+        .box::before {
+            content: "";
+            width: 400px;
+            height: 80px;
+            position: absolute;
+            border: 1px solid #33333346;
+            background:
+                linear-gradient(180deg, rgba(247, 244, 244, 1), rgba(0, 0, 0, 0.096), rgba(243, 241, 241, 0.8)),
+                linear-gradient(90deg, white, rgb(207, 206, 206), rgb(247, 245, 155));
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        .blackbox {
+            width: 30px;
+            height: 80px;
+            background: #000000c9;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            z-index: 3;
+        }
+
+        .box::after {
+            content: "";
+            width: 500px;
+            height: 60px;
+            position: absolute;
+            border: 1px solid #33333346;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(white, lightgray, white);
+            z-index: 1;
+        }
+
+        .leftbox {
+            width: 35px;
+            height: 80px;
+            background: linear-gradient(white, lightgray, white);
+            border: 1px solid #33333346;
+            border-radius: 12%;
+            position: absolute;
+            top: 50%;
+            left: 18%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+        }
+
+        .needle {
+            width: 70px;
+            height: 2px;
+            color: darkgray;
+            border: 1px solid darkgray;
+            position: absolute;
+            top: 400px;
+            left: 650px;
+            /* transform: translate(-50%, -50%); */
+        }
+
+        .scale {
+
+            width: 400px;
+            height: 20px;
+            position: absolute;
+            background-image:
+                linear-gradient(to right, #333 1px, transparent 1px);
+            background-repeat: repeat;
+            background-size: 10px;
+            top: 361px;
+            left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="blackbox"></div>
+        <div class="leftbox"></div>
+        <div class="needle"></div>
+        <div class="text">Made in Taiwan</div>
+        <div class="scale"></div>
+    </div>
+</body>
+
+</html>

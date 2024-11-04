@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+
+            .bear {
+                width: 400px;
+                height: 400px;
+                background: black;
+                position: absolute;
+                border-radius: 50%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+            }
+
+            .ear::before {
+                content: "";
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: radial-gradient(circle, white 50%, black 5%);
+                left: 10%;
+                top: 2%;
+                position: absolute;
+                z-index: 1;
+            }
+
+            .ear::after {
+                content: "";
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: radial-gradient(circle, white 50%, black 5%);
+                right: 10%;
+                top: 3%;
+                position: absolute;
+                z-index: 2;
+            }
+
+            .eyes-left {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background: radial-gradient(circle, black 50%, white 5%);
+                left: 20%;
+                top: 18%;
+                position: absolute;
+                z-index: 1;
+            }
+
+            .eyes-right {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background: radial-gradient(circle, black 50%, white 5%);
+                left: 65%;
+                top: 18%;
+                position: absolute;
+                z-index: 1;
+            }
+
+            .white {
+                width: 160px;
+                height: 110px;
+                border-radius: 70%;
+                background: white;
+                left: 30%;
+                top: 35%;
+                position: absolute;
+                z-index: 1;
+            }
+
+            .nose {
+                width: 25px;
+                height: 15px;
+                border-radius: 70%;
+                background: pink;
+                left: 46%;
+                top: 38%;
+                position: absolute;
+                z-index: 2;
+            }
+
+            .mouth {
+                width: 90px;
+                height: 40px;
+                border-radius: 70%;
+                background: brown;
+                left: 39%;
+                top: 48%;
+                position: absolute;
+                z-index: 2;
+            }
+
+            .red-left {
+                width: 80px;
+                height: 80px;
+                background: burlywood;
+                position: absolute;
+                border-radius: 50%;
+                left: -3%;
+                top: 40%;
+                z-index: 1;
+            }
+
+            .red-right {
+                width: 80px;
+                height: 80px;
+                background: burlywood;
+                position: relative;
+                border-radius: 50%;
+                right: -82%;
+                top: 40%;
+                z-index: 1;
+            }
+
+            .v-left {
+                width: 30px;
+                height: 60px;
+                background: lightgoldenrodyellow;
+                transform: rotate(315deg);
+                position: absolute;
+                left: 40%;
+                top: 75%;
+                transform: skew(45deg, 0deg);
+                transform-origin: center center;
+                z-index: 1;
+            }
+
+            .v-right {
+                width: 30px;
+                height: 60px;
+                background: lightgoldenrodyellow;
+                transform: rotate(45deg);
+                position: absolute;
+                left: 55%;
+                top: 75%;
+                transform: skew(315deg, 0deg);
+                transform-origin: center center;
+                z-index: 1;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bear">
+        <div class="ear"></div>
+        <div class="eyes-left"></div>
+        <div class="eyes-right"></div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+        <div class="red-left"></div>
+        <div class="red-right"></div>
+        <div class="white"></div>
+        <div class="v-left"></div>
+        <div class="v-right"></div>
+
+    </div>
+</body>
+
+</html>
